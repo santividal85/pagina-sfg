@@ -1,0 +1,553 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  color: #222;
+  line-height: 1.6;
+}
+
+/* HEADER */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+  background: #000;
+}
+
+.logo img {
+  height: 60px;
+}
+
+/* NAV */
+.nav a {
+  margin-left: 25px;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+}
+
+.nav a:hover {
+  color: #e3262e;
+}
+
+/* HERO */
+.hero {
+  background: #f4f4f4;
+  text-align: center;
+  padding: 100px 60px;
+}
+
+.hero h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+/* SECCIONES */
+.section {
+  padding: 80px 60px;
+}
+
+.section h2 {
+  font-size: 28px;
+  margin-bottom: 30px;
+  color: #0b2b3c;
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+}
+
+.card {
+  background: #f8f8f8;
+  padding: 30px;
+  font-weight: 600;
+}
+
+.card span {
+  display: block;
+  font-weight: 400;
+  margin-top: 10px;
+}
+
+/* LISTA */
+.list {
+  list-style: none;
+}
+
+.list li {
+  margin-bottom: 12px;
+}
+
+/* FOOTER */
+.footer {
+  background: #0b2b3c;
+  color: #fff;
+  padding: 80px 60px;
+}
+
+.footer-info {
+  margin-bottom: 40px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: none;
+}
+
+.contact-form textarea {
+  min-height: 120px;
+}
+
+.contact-form button {
+  padding: 12px 40px;
+  background: #e3262e;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: none;
+}
+.contact-form input,
+.contact-form textarea {
+  background-color: #fff;
+  color: #000;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: #e3262e;
+}
+/* ===== EQUIPO ===== */
+
+.section-desc {
+  max-width: 800px;
+  margin-bottom: 40px;
+  color: #555;
+  font-size: 16px;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.team-card {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-card h3 {
+  margin-bottom: 15px;
+  color: #0b2b3c;
+  font-size: 18px;
+}
+
+.team-card p {
+  color: #444;
+  font-size: 15px;
+}
+
+.team-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+/* ===== PRODUCTOS ===== */
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.product-card {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card h3 {
+  margin-bottom: 15px;
+  color: #0b2b3c;
+  font-size: 18px;
+}
+
+.product-card p {
+  color: #444;
+  font-size: 15px;
+}
+
+.product-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+/* ===== PROVEEDORES (ESTILO EDITORIAL) ===== */
+
+.providers-section {
+  background: #f5f2ee;
+}
+
+.providers-container {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  align-items: center;
+  gap: 60px;
+}
+
+.providers-text h2 {
+  font-size: 32px;
+  line-height: 1.2;
+  margin-bottom: 30px;
+}
+
+.providers-text h2 span {
+  font-size: 18px;
+  font-weight: 400;
+  color: #000;
+}
+
+.providers-text h2 strong {
+  color: #8b0000;
+  font-weight: 700;
+}
+
+.providers-text ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.providers-text ul li {
+  font-size: 16px;
+  margin-bottom: 12px;
+  position: relative;
+  padding-left: 15px;
+}
+
+.providers-text ul li::before {
+  content: "–";
+  position: absolute;
+  left: 0;
+}
+
+.providers-image {
+  background: #e3262e;
+  padding: 30px;
+}
+
+.providers-image img {
+  width: 100%;
+  display: block;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .providers-container {
+    grid-template-columns: 1fr;
+  }
+
+  .providers-image {
+    order: -1;
+  }
+}
+/* ===== PROVEEDORES (ESTILO EDITORIAL) ===== */
+
+.providers-section {
+  background: #f5f2ee;
+}
+
+.providers-container {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  align-items: center;
+  gap: 60px;
+}
+
+.providers-text h2 {
+  font-size: 32px;
+  line-height: 1.2;
+  margin-bottom: 30px;
+}
+
+.providers-text h2 span {
+  font-size: 18px;
+  font-weight: 400;
+  color: #000;
+}
+
+.providers-text h2 strong {
+  color: #8b0000;
+  font-weight: 700;
+}
+
+.providers-text ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.providers-text ul li {
+  font-size: 16px;
+  margin-bottom: 12px;
+  position: relative;
+  padding-left: 15px;
+}
+
+.providers-text ul li::before {
+  content: "–";
+  position: absolute;
+  left: 0;
+}
+
+.providers-image {
+  background: #e3262e;
+  padding: 30px;
+}
+
+.providers-image img {
+  width: 100%;
+  display: block;
+}
+
+/* ===== PRINCIPALES CLIENTES ===== */
+
+.clients-section {
+  text-align: center;
+  background: #ffffff;
+}
+
+.clients-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #e3262e;
+  margin-bottom: 40px;
+}
+
+.clients-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px 40px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.clients-list span {
+  font-size: 15px;
+  font-weight: 600;
+  color: #333;
+  padding: 10px 15px;
+  border-left: 3px solid #e3262e;
+  background: #f9f9f9;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .providers-container {
+    grid-template-columns: 1fr;
+  }
+
+  .providers-image {
+    order: -1;
+  }
+}
+/* ===== EQUIPO / MAQUINARIA ===== */
+
+.machine-section {
+  background: #f5f2ee;
+}
+
+.machine-container {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.machine-image img {
+  width: 100%;
+  display: block;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+.machine-info h2 {
+  font-size: 30px;
+  color: #8b0000;
+  margin-bottom: 20px;
+}
+
+.machine-info p {
+  font-size: 16px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.machine-info ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.machine-info ul li {
+  margin-bottom: 10px;
+  padding-left: 20px;
+  position: relative;
+  font-weight: 500;
+}
+
+.machine-info ul li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: #e3262e;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .machine-container {
+    grid-template-columns: 1fr;
+  }
+
+  .machine-image {
+    order: -1;
+  }
+}
+/* ===== IMAGEN DE MAQUINARIA EN EQUIPO ===== */
+
+.machine-wrapper {
+  margin: 40px auto 60px;
+  max-width: 1100px;
+  text-align: center;
+}
+
+.machine-wrapper img {
+  width: 100%;
+  display: block;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+  border-radius: 6px;
+}
+
+.machine-caption {
+  margin-top: 12px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #555;
+}
+/* ===== CONTACTO ===== */
+
+.contact-section {
+  background: #f5f2ee;
+}
+
+.contact-info-box {
+  max-width: 900px;
+  margin: 0 auto 40px;
+  padding: 30px;
+  background: #ffffff;
+  border-left: 5px solid #e3262e;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.contact-info-box p {
+  margin-bottom: 12px;
+  font-size: 15px;
+  color: #333;
+}
+
+.phones-title {
+  margin-top: 20px;
+}
+
+.phones {
+  font-size: 16px;
+  font-weight: 700;
+  color: #e3262e;
+  letter-spacing: 0.5px;
+}
+
+/* FORMULARIO */
+
+.contact-form {
+  max-width: 900px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.contact-form textarea {
+  grid-column: 1 / -1;
+  min-height: 120px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px 14px;
+  font-family: 'Montserrat', sans-serif;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.contact-form button {
+  grid-column: 1 / -1;
+  padding: 14px;
+  background: #e3262e;
+  color: #fff;
+  border: none;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background: #b81f25;
+}
+
+/* RESPONSIVE */
+@media (max-width: 700px) {
+  .contact-form {
+    grid-template-columns: 1fr;
+  }
+
+  .phones {
+    line-height: 1.6;
+  }
+}
+/* ===== HEADER CLARO ===== */
+
+.header {
+  background: #ffffff;   /* Quita fondo negro */
+}
+
+.header .logo img {
+  filter: none;          /* Logo normal */
+}
+
+.nav a {
+  color: #000;           /* Letras negras */
+  font-weight: 600;
+}
+
+.nav a:hover {
+  color: #e3262e;
+}
