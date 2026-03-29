@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SFG | Equipo</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;900&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><circle cx='22' cy='32' r='18' fill='%23e3262e'/><line x1='8' y1='22' x2='36' y2='22' stroke='white' stroke-width='3'/><line x1='6' y1='29' x2='38' y2='29' stroke='white' stroke-width='3'/><line x1='8' y1='36' x2='36' y2='36' stroke='white' stroke-width='3'/><line x1='12' y1='43' x2='34' y2='43' stroke='white' stroke-width='3'/><text x='44' y='44' font-family='serif' font-size='26' font-weight='900' fill='%230b2b3c'>G</text></svg>">
+  <style>
+    /* Hero fade-in al cargar */
+    .hero h1, .hero p,
+    .nosotros-hero h1, .nosotros-hero p,
+    .products-hero h1, .products-hero p,
+    .prod-hero h1, .prod-hero p, .prod-hero .prod-breadcrumb, .prod-hero .cta-cotizar,
+    .error-content {
+      opacity: 0;
+      transform: translateY(24px);
+      animation: heroFadeUp 0.8s ease forwards;
+    }
+    .hero h1, .nosotros-hero h1, .products-hero h1, .prod-hero .prod-breadcrumb { animation-delay: 0.1s; }
+    .hero p,  .nosotros-hero p,  .products-hero p,  .prod-hero h1             { animation-delay: 0.25s; }
+    .prod-hero p                                                                { animation-delay: 0.4s; }
+    .prod-hero .cta-cotizar                                                     { animation-delay: 0.55s; }
+    .error-content                                                              { animation-delay: 0.1s; }
+    @keyframes heroFadeUp {
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header">
+  <div class="logo">
+    <img src="logosfg.jpeg" alt="Logo Servicios y Formas Gráficas">
+  </div>
+  <nav class="nav">
+    <a href="index.html">Empresa</a>
+    <a href="nosotros.html">Nosotros</a>
+    <a href="equipo.html" class="active">Equipo</a>
+    <a href="productos.html">Productos</a>
+    <a href="contacto.html">Contacto</a>
+  </nav>
+  <button class="hamburger" id="hamburger" aria-label="Menú">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<!-- MENÚ MÓVIL -->
+<nav class="nav-mobile" id="nav-mobile">
+  <a href="index.html" onclick="closeMobileNav()">Empresa</a>
+  <a href="nosotros.html" onclick="closeMobileNav()">Nosotros</a>
+  <a href="equipo.html" onclick="closeMobileNav()">Equipo</a>
+  <a href="productos.html" onclick="closeMobileNav()">Productos</a>
+  <a href="contacto.html" onclick="closeMobileNav()">Contacto</a>
+</nav>
+
+<!-- CONTENIDO -->
+<section class="section">
+  <h2>Nuestro Equipo y Tecnología</h2>
+  <p class="section-desc">
+    Contamos con personal altamente capacitado y maquinaria de última generación
+    que nos permite ofrecer productos impresos con la más alta calidad.
+  </p>
+
+  <!-- IMAGEN MAQUINARIA -->
+  <div class="machine-wrapper fade-in">
+    <img src="sppedmaster.jpg" alt="Heidelberg Speedmaster — Prensa Offset">
+    <p class="machine-caption">Prensa Offset Heidelberg Speedmaster</p>
+  </div>
+
+  <!-- TARJETAS DE EQUIPO -->
+  <div class="team-grid">
+    <div class="team-card fade-in">
+      <h3>🎨 Diseño Gráfico</h3>
+      <p>Especialistas en Corel, Illustrator y Photoshop para resultados creativos de alto nivel.</p>
+    </div>
+    <div class="team-card fade-in">
+      <h3>🖨️ Pre Prensa Digital</h3>
+      <p>CTP Trendsetter para máxima precisión en la preparación de placas offset.</p>
+    </div>
+    <div class="team-card fade-in">
+      <h3>⚙️ Prensas Industriales</h3>
+      <p>Rotativas hasta 4 colores y Prensa Plana Heidelberg de 1 a 6 colores.</p>
+    </div>
+    <div class="team-card fade-in">
+      <h3>🏷️ Flexografía</h3>
+      <p>Prensa Mark Andy de 6 colores para etiquetas adhesivas de alta calidad.</p>
+    </div>
+    <div class="team-card fade-in">
+      <h3>🖥️ Impresión Digital</h3>
+      <p>HP Índigo, Xerox, Canon, Riso y Konica Minolta para tirajes cortos de alta calidad.</p>
+    </div>
+    <div class="team-card fade-in">
+      <h3>🎯 Gran Formato</h3>
+      <p>Lonas, Viniles, Banners y Arañas para publicidad exterior de gran impacto.</p>
+    </div>
+    <div class="team-card fade-in">
+      <h3>✂️ Acabados</h3>
+      <p>Dobladoras, Colectoras, Guillotinas, Suajadoras y Pegadoras industriales.</p>
+    </div>
+    <div class="team-card fade-in">
+      <h3>📚 Encuadernación</h3>
+      <p>Hotmelt, Engrapado y Pasta dura para acabados profesionales de larga duración.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <p>&copy; 2026 <strong>Servicios y Formas Gráficas S.A. de C.V.</strong> — Todos los derechos reservados.</p>
+</footer>
+
+<!-- WHATSAPP FLOTANTE -->
+<a href="https://wa.me/5530108580" target="_blank" class="whatsapp-float" aria-label="Contactar por WhatsApp">
+  <svg viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+  </svg>
+</a>
+
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const navMobile = document.getElementById('nav-mobile');
+
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('open');
+    navMobile.classList.toggle('open');
+    document.body.style.overflow = navMobile.classList.contains('open') ? 'hidden' : '';
+  });
+
+  function closeMobileNav() {
+    hamburger.classList.remove('open');
+    navMobile.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  const fadeEls = document.querySelectorAll('.fade-in');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        observer.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12 });
+
+  fadeEls.forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
