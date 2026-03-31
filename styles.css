@@ -48,14 +48,14 @@ img { max-width: 100%; display: block; }
   justify-content: space-between;
   align-items: center;
   padding: 0 60px;
-  height: 80px;
+  height: 95px;
   background: var(--white);
   border-bottom: 2px solid #f0f0f0;
   box-shadow: 0 2px 20px rgba(0,0,0,0.06);
 }
 
 .logo img {
-  height: 60px;
+  height: 80px;
   width: auto;
   object-fit: contain;
 }
