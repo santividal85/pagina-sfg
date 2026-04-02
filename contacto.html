@@ -6,6 +6,28 @@
   <title>SFG | Contacto</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;900&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><circle cx='22' cy='32' r='18' fill='%23e3262e'/><line x1='8' y1='22' x2='36' y2='22' stroke='white' stroke-width='3'/><line x1='6' y1='29' x2='38' y2='29' stroke='white' stroke-width='3'/><line x1='8' y1='36' x2='36' y2='36' stroke='white' stroke-width='3'/><line x1='12' y1='43' x2='34' y2='43' stroke='white' stroke-width='3'/><text x='44' y='44' font-family='serif' font-size='26' font-weight='900' fill='%230b2b3c'>G</text></svg>">
+  <style>
+    /* Hero fade-in al cargar */
+    .hero h1, .hero p,
+    .nosotros-hero h1, .nosotros-hero p,
+    .products-hero h1, .products-hero p,
+    .prod-hero h1, .prod-hero p, .prod-hero .prod-breadcrumb, .prod-hero .cta-cotizar,
+    .error-content {
+      opacity: 0;
+      transform: translateY(24px);
+      animation: heroFadeUp 0.8s ease forwards;
+    }
+    .hero h1, .nosotros-hero h1, .products-hero h1, .prod-hero .prod-breadcrumb { animation-delay: 0.1s; }
+    .hero p,  .nosotros-hero p,  .products-hero p,  .prod-hero h1             { animation-delay: 0.25s; }
+    .prod-hero p                                                                { animation-delay: 0.4s; }
+    .prod-hero .cta-cotizar                                                     { animation-delay: 0.55s; }
+    .error-content                                                              { animation-delay: 0.1s; }
+    @keyframes heroFadeUp {
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
 </head>
 <body>
 
@@ -36,58 +58,233 @@
 </nav>
 
 <!-- CONTENIDO -->
-<section class="section contact-section">
-  <h2>Contacto</h2>
-
-  <!-- INFO DE CONTACTO -->
-  <div class="contact-info-box fade-in">
-    <p><strong>📧 Email:</strong> ventas@sfg.com.mx</p>
-    <p><strong>📍 Dirección:</strong> Real del Monte No. 25, Col. Industrial, Gustavo A. Madero, 07800, CDMX</p>
-    <p class="phones-title"><strong>📞 Teléfonos:</strong></p>
-    <p class="phones">
-      55 5739-0126 &nbsp;|&nbsp;
-      55 5739-0047 &nbsp;|&nbsp;
-      55 5537-1358 &nbsp;|&nbsp;
-      55 5537-9599
-    </p>
+<div class="contact-hero">
+  <div class="contact-hero-overlay"></div>
+  <div class="contact-hero-content">
+    <h1>Contáctanos</h1>
+    <p>Estamos listos para atender tu proyecto. Escríbenos o llámanos.</p>
   </div>
+</div>
 
-  <!-- FORMULARIO -->
-  <form class="contact-form fade-in" id="contact-form">
-    <input type="text"  name="nombre"   placeholder="Nombre"   required>
-    <input type="email" name="email"    placeholder="Email"    required>
-    <input type="tel"   name="telefono" placeholder="Teléfono">
-    <input type="text"  name="estado"   placeholder="Estado">
-    <textarea name="mensaje" placeholder="Mensaje"></textarea>
-    <button type="submit">Enviar mensaje</button>
-  </form>
+<section class="contact-main">
+  <div class="contact-grid">
 
-  <!-- MAPA -->
-  <div class="map-wrapper fade-in">
-    <iframe
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3761.9!2d-99.1!3d19.5!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTnCsDMwJzAwLjAiTiA5OcKwMDYnMDAuMCJX!5e0!3m2!1ses!2smx!4v1234567890"
-      allowfullscreen=""
-      loading="lazy"
-      referrerpolicy="no-referrer-when-downgrade"
-      title="Ubicación SFG — Real del Monte No. 25, Gustavo A. Madero">
-    </iframe>
+    <!-- INFO -->
+    <div class="contact-info-col fade-in">
+      <h2>Información de contacto</h2>
+
+      <div class="contact-detail">
+        <div class="contact-detail-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        </div>
+        <div>
+          <span class="detail-label">Email</span>
+          <span class="detail-value">ventas@sfg.com.mx</span>
+        </div>
+      </div>
+
+      <div class="contact-detail">
+        <div class="contact-detail-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        </div>
+        <div>
+          <span class="detail-label">Dirección</span>
+          <span class="detail-value">Real del Monte No. 25, Col. Industrial, Gustavo A. Madero, 07800, CDMX</span>
+        </div>
+      </div>
+
+      <div class="contact-detail">
+        <div class="contact-detail-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8 19.79 19.79 0 01.22 1.18 2 2 0 012.22 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.16 6.16l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        </div>
+        <div>
+          <span class="detail-label">Teléfonos</span>
+          <span class="detail-value phones-value">
+            55 5739-0126 · 55 5739-0047<br>
+            55 5537-1358 · 55 5537-9599
+          </span>
+        </div>
+      </div>
+
+      <!-- MAPA -->
+      <div class="map-wrapper" style="margin-top:32px;">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15046.876!2d-99.1097!3d19.4969!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1f8b8b8b8b8b8%3A0x0!2sGustavo+A.+Madero%2C+CDMX!5e0!3m2!1ses!2smx!4v1234567890"
+          allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Zona SFG — Gustavo A. Madero, CDMX">
+        </iframe>
+      </div>
+    </div>
+
+    <!-- FORMULARIO -->
+    <div class="contact-form-col fade-in">
+      <h2>Envíanos un mensaje</h2>
+      <form class="contact-form" id="contact-form">
+        <input type="text"  name="nombre"   placeholder="Nombre"   required>
+        <input type="email" name="email"    placeholder="Email"    required>
+        <input type="tel"   name="telefono" placeholder="Teléfono">
+        <input type="text"  name="estado"   placeholder="Estado">
+        <textarea name="mensaje" placeholder="Mensaje"></textarea>
+        <button type="submit">Enviar mensaje</button>
+      </form>
+    </div>
+
   </div>
 </section>
 
+<style>
+  /* HERO CON IMAGEN */
+  .contact-hero {
+    position: relative;
+    background: url('impresion.jpg') center/cover no-repeat;
+    height: 320px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+  }
+  .contact-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(11,43,60,0.88) 0%, rgba(227,38,46,0.55) 100%);
+  }
+  .contact-hero-content {
+    position: relative;
+    z-index: 1;
+    padding: 0 24px;
+  }
+  .contact-hero-content h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(36px, 5vw, 60px);
+    color: #fff;
+    margin-bottom: 14px;
+    line-height: 1.1;
+  }
+  .contact-hero-content p {
+    color: rgba(255,255,255,0.8);
+    font-size: 17px;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  /* MAIN */
+  .contact-main {
+    background: #f5f2ee;
+    padding: 80px 60px;
+  }
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    max-width: 1100px;
+    margin: 0 auto;
+    align-items: start;
+  }
+
+  /* INFO COL */
+  .contact-info-col h2,
+  .contact-form-col h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 26px;
+    color: #0b2b3c;
+    margin-bottom: 32px;
+  }
+  .contact-info-col h2::after,
+  .contact-form-col h2::after {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 3px;
+    background: #e3262e;
+    margin-top: 10px;
+  }
+
+  .contact-detail {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+    margin-bottom: 28px;
+  }
+  .contact-detail-icon {
+    width: 44px;
+    height: 44px;
+    background: #e3262e;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    color: #fff;
+    padding: 10px;
+  }
+  .contact-detail-icon svg { width: 100%; height: 100%; }
+  .detail-label {
+    display: block;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #e3262e;
+    margin-bottom: 4px;
+  }
+  .detail-value {
+    display: block;
+    font-size: 14px;
+    color: #333;
+    font-weight: 500;
+    line-height: 1.6;
+  }
+  .phones-value {
+    font-weight: 700;
+    color: #0b2b3c;
+  }
+
+  /* FORM COL */
+  .contact-form-col h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 26px;
+    color: #0b2b3c;
+    margin-bottom: 32px;
+  }
+  .contact-form-col h2::after {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 3px;
+    background: #e3262e;
+    margin-top: 10px;
+  }
+  .contact-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    max-width: 100%;
+    margin: 0;
+  }
+
+  @media (max-width: 900px) {
+    .contact-main { padding: 60px 24px; }
+    .contact-grid { grid-template-columns: 1fr; gap: 40px; }
+    .contact-form { grid-template-columns: 1fr; }
+  }
+</style>
+
 <!-- FOOTER -->
 <footer class="footer">
-  <p>&copy; 2025 <strong>Servicios y Formas Gráficas S.A. de C.V.</strong> — Todos los derechos reservados.</p>
+  <p>&copy; 2026 <strong>Servicios y Formas Gráficas S.A. de C.V.</strong> — Todos los derechos reservados.</p>
 </footer>
 
 <!-- WHATSAPP FLOTANTE -->
-<a href="https://wa.me/525530108580" target="_blank" class="whatsapp-float" aria-label="Contactar por WhatsApp">
-  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<a href="https://wa.me/5530108580" target="_blank" class="whatsapp-float" aria-label="Contactar por WhatsApp">
+  <svg viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
     <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
   </svg>
 </a>
 
 <!-- EMAILJS -->
-<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 <script>
   // EmailJS
   (function() { emailjs.init("wns4_ckWjlA_3sBxh"); })();
@@ -149,6 +346,5 @@
 
   fadeEls.forEach(el => observer.observe(el));
 </script>
-
 </body>
 </html>
